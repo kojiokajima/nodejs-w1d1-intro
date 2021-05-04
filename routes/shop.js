@@ -8,7 +8,6 @@ router.get('/', (req, res, next) => {
 })
 
 router.get("*", (req, res) => {
-  console.log("yoyoyoyo");
   res.sendFile(path.join(__dirname,'../', 'public', '404.html'))
 })
 
