@@ -39,6 +39,10 @@ app.post('/product', (req, res) => {
 // route
 app.use(showRouters)
 
+router.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname,'../', 'public', '404.html'))
+})
+
 
 const PORT = process.env.PORT || 5000
 app.listen(PORT, () => console.log(`Server started at port ${PORT}`))
