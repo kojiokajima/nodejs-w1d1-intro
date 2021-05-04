@@ -40,7 +40,8 @@ app.post('/product', (req, res) => {
 app.use(showRouters)
 
 router.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname,'../', 'public', '404.html'))
+  console.log();
+  res.sendFile(path.join(__dirname, 'public', '404.html'))
 })
 
 
