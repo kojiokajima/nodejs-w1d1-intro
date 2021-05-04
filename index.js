@@ -39,7 +39,7 @@ app.post('/product', (req, res) => {
 // route
 app.use(showRouters)
 
-router.get("*", (req, res) => {
+app.get("*", (req, res) => {
   console.log();
   res.sendFile(path.join(__dirname, 'public', '404.html'))
 })
